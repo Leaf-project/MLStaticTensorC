@@ -1,0 +1,20 @@
+[Description]
+Recurrent Cell which has ilen input length
+[Pre-Config]
+f : afunc,		///You can just skip line '\n' or put comma
+shpw0:list, shpw1:list, shpb:list 
+ilen:int
+[Inputs]
+i : type=list : len=ilen
+[Content]
+y0 = i @ W0
+y1 = y4[-1] @ w1
+y2 = y0 + y1
+y3 = y3 + b
+y4 = f(y3)
+[imutables]
+W0 : type=weight : shape=shpw0 : arr=-rnd
+W1 : weight : shpw1 : -rnd 
+b  : weight : shpb : -rnd
+[Outputs]
+y4

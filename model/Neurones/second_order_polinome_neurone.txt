@@ -1,0 +1,8 @@
+[Description]
+f(Pn)	Where Pn is polinome of n order.
+Ex:n=3
+f(ax**3 + bx**2 + cx + d + d/x + e/x**2 + f/x**3)
+[Pre-Config]
+[Input]
+x
+[Content]

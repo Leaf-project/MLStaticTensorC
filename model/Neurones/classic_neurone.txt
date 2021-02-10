@@ -1,0 +1,17 @@
+[Describe]
+Classic
+[Pre-Config]
+f : afunc
+[Input]
+i
+[Content]
+y0 = i @ w
+y1 = y0 + b
+y2 = i+ y1
+y3 = f(y2)
+y4 = Relu(y3)
+[imutable]
+w : weight : shpw
+b : weight : shpb
+[Output]
+y2

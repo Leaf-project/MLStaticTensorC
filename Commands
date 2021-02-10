@@ -1,0 +1,20 @@
+Linear sum				: +  : 'y = a + b    ' : 0,y,yt,a,at,b,bt
+Linear sub				: -  : 'y = a - b    ' : 1,y,yt,a,at,b,bt
+Linear mul				: *  : 'y = a * b    ' : 2,y,yt,a,at,b,bt
+Linear div				: /  : 'y = a / b    ' : 3,y,yt,a,at,b,bt
+Linear pow				: ^  : 'y = a ^ b    ' : 4,y,yt,a,at,b,bt
+Dot product				: @  : 'y = a @ b    ' : 5,y,yt,a,at,b,bt
+Iter sum				: i+ : 'y = i+ a     ' : 6,y,yt,a,at
+Iter sub				: i- : 'y = i- a     ' : 7,y,yt,a,at
+Iter mul				: i* : 'y = i* a     ' : 8,y,yt,a,at
+Iter div				: i/ : 'y = i/ a     ' : 9,y,yt,a,at
+Iter pow				: i^ : 'y = i^ a     ' : 10,y,yt,a,at
+Function				: )  : 'y = f(b)     ' : 11,y,yt,a,at,f
+Mult-params Function	: )) : 'y = f(a,...) ' : 12,y,yt,f,n,a's,at's (n - nb of couples (pid,pt))
+Transpose				: T  : 'y = a.T      ' : 13,y,yt,a,at
+Kernel convultion		: |  : 'y = a | K mod' : 14,y,yt,a,at,k,kt,modid  (mod-ids:('valid','same'))
+Convolution (x-size)	: #x : 'y = a #x b   ' : 15,y,yt,a,at,b,bt,x's (x - block sizes)
+Pooling					: p) : 'y = pool(a,x)' : 16,y,yt,a,at,f,x (x- block size)
+Random					: %  : 'y = %s       ' : 17,y,yt,s	(srand will be : srand = grnd + s)
+Split					: :  : 'y0,y1... : a ' : 18,n,(y,yt)'s,a,at
+Pyramidals				: P  : 'y=P(a,w)mod|p' : 19,y,yt,a,at,w,wt,modid,param's

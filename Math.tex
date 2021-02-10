@@ -1,0 +1,52 @@
+\documentclass[11pt]{article}
+    \title{\textbf{Math language}}
+    \author{Kashtanov Vadim}
+    \date{}
+    
+    \addtolength{\topmargin}{-3cm}
+    \addtolength{\textheight}{3cm}
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\section{Equations}
+If we set an equation \[y = exp(4x + 1)\] We can see some variables and any-circonstance global constants : 4, x, 1 and the function exp. We can rewrite it as \[\alpha=\{4,x,1\}\] \[y = exp(\alpha_{0} * \alpha_1 + \alpha_2)\]
+In fact an eqation is a representation of relatingchip between argument's throught operation, where functions are just macros (ex: $\exp(x) = e^{x}$).
+
+\section{Derivatives}
+If we take equation as $y = x^{x}$ it's partial derivative in x will be \[\frac{\partial y}{\partial x} = x^{x}(ln(x)+1)\]
+But if we rewrite the equation with $\alpha = \{x,x_1\}$ where $x_1 = x$ and $y_{1} = y$ then we can write
+\[y_{1} = x^{x_{1}}\]
+then
+\[\frac{\partial y_{1}}{\partial x} = x_{1}x^{x_{1}-1} = x^{x_{1}} \ (because\ x=x_{1})\]
+\[\frac{\partial y_{1}}{\partial x_{1}} = x^{x_{1}} ln (x_{1})\]
+then
+
+\[
+\left \{
+\begin{array}{r c l}
+	y = x^{x} \\
+	y_1 = x^{x_{1}} \\
+	x_{1} = x \\
+	y_1 = y
+\end{array}
+\right .
+\iff
+\frac{\partial y}{\partial x} = \frac{\partial y_{1}}{\partial x} + \frac{\partial y_{1}}{\partial x_{1}}
+\]
+Why not in $y = x^{x}$ not setting up $\alpha = \{x,x\}$ ? Yes, it's a great idea. Then goes more global form of total derivatives (or partial). 
+\\
+We can set up this $\alpha_{0} : \alpha_{1}$. It meen, does $\alpha_{0}$ same as $\alpha_{1}$ as object (and of course as number because $x=x$). Then we can rewrite partial derivative of $\{\ y=x^{x} \ ; \ \alpha = \{x,x\}\ \}$
+\[
+\frac{\partial y}{\partial x} = \sum_{i=0}^{card(\alpha)}
+\left \{
+\begin{array}{r c l}
+	0 \ \ if \ \  \alpha_{i} : x \\
+	\frac{\partial y}{\partial \alpha_{i}} \ \ otherwise
+\end{array}
+\right .
+\]
+
+\end{document}
+

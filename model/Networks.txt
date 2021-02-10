@@ -1,0 +1,14 @@
+========Fully connected========
+y = f(L[-1]@W0 + b0)
+or
+y = f(L[-1]@W0 + y[-2]@W1 + b0)
+###
+$0 = $l-1 @ $w0				|L[-1]@W0 				l-1 is last layer
+	$1 = $out[-1] @ $w1 	|y[-2]@W1 				if rnn	history
+	$2 = $0 + $1 			|L[-1]@W0 + y[-2]@W1	if rnn
+$3 = $2 + $b 				|+ b0 					adding bias
+$4 = f($3)					|y=f()					activation function
+$5							|w0 normal
+	$6						|w1 rnn
+$7							|b0 bias
+===============================
